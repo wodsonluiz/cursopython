@@ -1,5 +1,6 @@
 class Impressora:
 
+    #metodos de classe não tem acesso aos objetos que está no escopo da classe [self.a = 10]
     def __init__(self):
         self.a = 10
 
@@ -12,10 +13,6 @@ class Impressora:
         for i in range(paginas):
             cls.imprimir_folha()
 
-    @classmethod
-    def imprimir_a(cls):
-        print(cls.a)
-
 Impressora.imprimir_folha()
 
 Impressora.imprimir_livro(5)
@@ -23,7 +20,3 @@ Impressora.imprimir_livro(5)
 impressora = Impressora()
 
 impressora.imprimir_folha()
-
-#impressora.imprimir_a()
-
-impressora.imprimir_a()
